@@ -1,0 +1,27 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+
+.Upload {
+    
+
+    &__Button {
+    background-color: $secondary-color;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 0.25rem;
+    border: 0;
+    @include mobile-subheader;
+    @include padding (0.75,0.5,0.75,0.5);
+    background-image: url(../../assets/Icons/upload.svg);
+    background-repeat: no-repeat;
+    background-position: center left 0.5rem;
+    }
+
+}
+
