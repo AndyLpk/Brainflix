@@ -10,8 +10,8 @@ function Header () {
     return(
         <div className='Header'>
             <Logo />
-            <div className='Nav'>
-                <div className='Nav__Wrapper'>
+            <div className='Header__Nav'>
+                <div className='Header__Wrapper'>
                     <SearchBox />
                     <Avatar />
                 </div>

@@ -5,8 +5,8 @@ import './SearchBox.scss'
 function SearchBox () {
     return(
 
-        <form className='Form'>
-            <input type="text" id='search' name='search' placeholder='search' className='Form__Input'/>
+        <form className='Header__Form'>
+            <input type="text" id='search' name='search' placeholder='search' className='Header__Input'/>
         </form>
     )
 }

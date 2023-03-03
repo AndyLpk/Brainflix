@@ -12,13 +12,11 @@
   font-style: normal;
   font-display: swap;
 }
-.Nav {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+.Header__Nav {
+  padding: 0rem 1rem 1rem 1rem;
 }
-.Nav__Wrapper {
+.Header__Wrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   padding-bottom: 1rem;
 }/*# sourceMappingURL=Header.css.map */

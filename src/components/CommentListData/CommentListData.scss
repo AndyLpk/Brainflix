@@ -1,0 +1,68 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.Comment {
+
+    &__Item {
+        @include mobile-bodyfont;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid silver;
+        padding-top: 1rem;
+        
+    } 
+
+    &__Img {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: left;
+        background-color: $mercury;
+
+        @include tablet {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    &__Wrapper {
+
+        &--List {
+            width: 80%;
+        }
+    }
+
+    
+
+    &__Name {
+        
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__Date {
+        color: silver;
+        margin: 0;
+        
+    }
+
+    &__Content {
+        width: 100% auto;
+
+        @include desktop {
+            line-height: 1.375rem ;
+        }
+    }
+
+    &__Top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

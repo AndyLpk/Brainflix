@@ -2,13 +2,14 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/fonts' as *;
 
+.Header {
 
-
-.Form {
-
+    &__Form{
+        width: 100%;
+    }
 
     &__Input {
-        @include padding (0.56,1.75,0.56,0.5);
+        @include padding (0.56,0,0.56,0);
         border: 1.5px solid rgba(192, 192, 192, 0.5);
         border-radius: 0.25rem;
         background-color: rgba(192, 192, 192, 0.1);
@@ -16,12 +17,14 @@
         background-image: url(../../assets/Icons/search.svg);
         background-repeat: no-repeat;
         background-position: center left 0.5rem;
+        background-size: 1rem;
     }
 
     &__Input::placeholder {
-        padding-left: 1.75rem;
+        padding-left: 2rem;
         text-transform: capitalize;
         @include mobile-bodyfont;
+        width: 100%;
 
     }
 }

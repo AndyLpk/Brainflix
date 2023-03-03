@@ -3,8 +3,8 @@ import './UploadButton.scss'
 function UploadButton () {
 
     return(
-        <div className='Upload'>
-            <button className="Upload__Button">upload</button>
+        <div className='Header__Upload'>
+            <button className="Header__Button">upload</button>
         </div>
     )
 }
