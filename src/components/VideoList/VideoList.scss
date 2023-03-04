@@ -2,9 +2,12 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/fonts' as *;
 
+
+
 .Video {
 
     @include padding (0,1,0,1);
+    
 
     &__Header {
         @include mobile-sectionheader;

@@ -4,10 +4,10 @@
 
 
 
-.Hero {
+.video{
 
 
-    &__Player {
+    &__player {
         width: 100%;
         padding-bottom: 1rem;
         
@@ -17,8 +17,12 @@
             background-color: black;
             aspect-ratio: 16 / 9 ;
             max-height: 48vh;
+            margin-bottom: 1rem; 
             padding-bottom: 0;
-            margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            max-height: 59vh;
         }
     }
     

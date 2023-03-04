@@ -8,7 +8,7 @@ import './Header.scss'
 function Header () {
 
     return(
-        <div className='header'>
+        <section className='header'>
             <Logo />
 
             <div className='header__nav'>
@@ -19,7 +19,7 @@ function Header () {
 
             </div>
             
-        </div>
+        </section>
     )
 }
 

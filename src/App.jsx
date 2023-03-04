@@ -1,11 +1,13 @@
 import './App.scss';
 import CommentSection from './components/CommentSection/CommentSection';
 import Header from './components/Header/Header';
-import Video from './components/Video/Video';
+
 import VideoList from './components/VideoList/VideoList';
+import VideoDescription from './components/VideoDescription/VideoDescription'
 
 import VideoData from './assets/Data/video-details.json'
 import { useState } from 'react';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 function App() {
 
@@ -23,19 +25,30 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Video 
+      
+      <VideoPlayer 
         Videos={Videos}
         selectedVideo={selectedVideo}
       />
-      <CommentSection 
-        Videos={Videos}
-        selectedVideo={selectedVideo}
-      />
-      <VideoList 
-        videos={Videos} 
-        selectedVideo={selectedVideo} 
-        handleVideoClick={handleVideoClick}
-      />
+
+      <div className='app__wrapper'>
+
+        <VideoDescription 
+          Videos={Videos}
+          selectedVideo={selectedVideo}
+        />
+                
+        <CommentSection 
+          Videos={Videos}
+          selectedVideo={selectedVideo}
+        />
+        <VideoList 
+          videos={Videos} 
+          selectedVideo={selectedVideo} 
+          handleVideoClick={handleVideoClick}
+        />
+      </div>
+      
     </div>
   );
 }
