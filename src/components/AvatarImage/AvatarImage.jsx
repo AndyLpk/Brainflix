@@ -5,9 +5,9 @@ import './AvatarImage.scss'
 function Avatar() {
 
     return(
-        <>
-            <img className='Avatar' src={avatar}/>
-        </>
+        <div className='header__avatar'>
+            <img className='avatar' src={avatar}/>
+        </div>
     )
 }
 

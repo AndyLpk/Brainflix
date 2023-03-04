@@ -1,1 +1,58 @@
-/*# sourceMappingURL=VideoList.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.Video {
+  padding: 0rem 1rem 0rem 1rem;
+}
+.Video__Header {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: silver;
+  text-transform: uppercase;
+}
+.Video__List {
+  list-style: none;
+  padding: 0;
+}
+.Video__Img {
+  border-radius: 4px;
+  max-width: 100%;
+  width: 35%;
+  height: 3.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Video__Wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.Video__Right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+.Video__Title {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+.Video__Channel {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}/*# sourceMappingURL=VideoList.css.map */

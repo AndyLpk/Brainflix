@@ -3,24 +3,41 @@
 @use '../../styles/partials/fonts' as *;
 
 
-.Header {
+.header {
+
+    &__upload {
+        
+        order: 2;
+        flex: 1 1 100%;
+
+        @include tablet {
+            order: 1;
+            flex: 1 1 25%;
+        }
+
+    }
     
 
-    &__Button {
-    background-color: $secondary-color;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 0.25rem;
-    border: 0;
-    @include mobile-subheader;
-    @include padding (0.75,0.5,0.75,0.5);
-    background-image: url(../../assets/Icons/upload.svg);
-    background-repeat: no-repeat;
-    background-position: center left 0.5rem;
+    &__button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 0.25rem;
+        @include mobile-subheader;
+        text-transform: uppercase;
+        color: white;
+        @include padding (0.75,0.5,0.75,0.5);
+        background-color: $secondary-color;
+        background-image: url(../../assets/Icons/upload.svg);
+        background-repeat: no-repeat;
+        background-position: center left 0.5rem;
+
+        @include tablet {
+            @include padding (0.625,0.5,0.625,0.5);
+        }
+    
     }
 
 }

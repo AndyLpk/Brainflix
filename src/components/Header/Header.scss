@@ -5,15 +5,33 @@
 
 
 
-.Header {
+.header {
     
-    &__Nav {
-        @include padding (0,1,1,1);
-    }
-    
-    &__Wrapper {
+    @include tablet {
         display: flex;
+        justify-content: space-between;
+        padding-right: 2.25rem
+
+    }
+
+    &__nav {
+        @include padding (0,1,1,1);
+        display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
-        padding-bottom: 1rem;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            @include padding (1,0,1,0);
+            width: 65%;
+        }
+
+        @include desktop {
+            width: 47%;
+            @include padding (1,6.25,1,0);
+            gap: 1.5rem;          
+            
+        }
     }
 }
+

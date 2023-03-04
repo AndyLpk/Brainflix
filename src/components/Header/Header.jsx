@@ -8,15 +8,17 @@ import './Header.scss'
 function Header () {
 
     return(
-        <div className='Header'>
+        <div className='header'>
             <Logo />
-            <div className='Header__Nav'>
-                <div className='Header__Wrapper'>
-                    <SearchBox />
-                    <Avatar />
-                </div>
+
+            <div className='header__nav'>
+
+                <SearchBox  />
+                <Avatar />
                 <UploadButton />
+
             </div>
+            
         </div>
     )
 }

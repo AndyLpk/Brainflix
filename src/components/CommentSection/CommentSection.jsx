@@ -2,12 +2,15 @@ import CommentForm from '../CommentForm/CommentForm'
 import CommentList from '../CommentList/CommentList';
 import './CommentSection.scss'
 
-function CommentSection () {
+function CommentSection (props) {
 
     return (
         <div className='Comment'>
             <CommentForm />
-            <CommentList />
+            <CommentList 
+                Videos={props.Videos}
+                selectedVideo={props.selectedVideo}
+            />
         </div>
     )
 }

@@ -1,0 +1,58 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.Video {
+
+    @include padding (0,1,0,1);
+
+    &__Header {
+        @include mobile-sectionheader;
+        color: silver;
+        text-transform: uppercase;
+    }
+
+    &__List {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__Images {
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+        width: 35%;
+        
+    }
+
+    &__Img {
+        border-radius: 4px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        
+    }
+
+    &__Wrapper {
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    &__Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    &__Title {
+        margin: 0;
+        @include mobile-sectionheader;
+    }
+
+    &__Channel {
+        margin: 0;
+        @include mobile-bodyfont;
+    }
+
+}

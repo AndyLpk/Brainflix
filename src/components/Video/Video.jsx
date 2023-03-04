@@ -1,25 +1,21 @@
 import VideoPlayer from '../VideoPlayer/VideoPlayer'
 import './Video.scss'
 
-import VideoData from '../../assets/Data/video-details.json'
-import { useState } from 'react';
 import VideoDescription from '../VideoDescription/VideoDescription';
 
 
-function Video () {
+function Video (props) {
 
-    const [Videos] = useState(VideoData);
-    const [selectedVideo, setSelectedVideo] = useState(Videos[0]);
 
     return (
         <div className='Hero'>
             <VideoPlayer 
-                Videos={Videos}
-                selectedVideo={selectedVideo}
+                Videos={props.Videos}
+                selectedVideo={props.selectedVideo}
             />
             <VideoDescription 
-                Videos={Videos}
-                selectedVideo={selectedVideo}
+                Videos={props.Videos}
+                selectedVideo={props.selectedVideo}
             />
         </div>
     )

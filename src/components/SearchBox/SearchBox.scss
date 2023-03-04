@@ -2,13 +2,20 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/fonts' as *;
 
-.Header {
+.header {
 
-    &__Form{
+    &__form{
         width: 100%;
+        order: -1;
+        flex: 1 1 75%;
+        
+        @include tablet {
+            flex: 1 0 40%;
+
+        }
     }
 
-    &__Input {
+    &__input {
         @include padding (0.56,0,0.56,0);
         border: 1.5px solid rgba(192, 192, 192, 0.5);
         border-radius: 0.25rem;
@@ -18,9 +25,13 @@
         background-repeat: no-repeat;
         background-position: center left 0.5rem;
         background-size: 1rem;
+
+        @include tablet {
+            @include padding (0.625,0.5,0.625,0.5);
+        }
     }
 
-    &__Input::placeholder {
+    &__input::placeholder {
         padding-left: 2rem;
         text-transform: capitalize;
         @include mobile-bodyfont;

@@ -1,20 +1,30 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.Avatar {
+
+.header {
+
+    &__avatar {
+        order: 1;
+
+        @include tablet {
+            order: 2;
+            padding-left: 0.75rem;
+        }
+    }
+}
+.avatar {
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
     object-fit: cover;
     object-position: left;
     background-color: $mercury;
+    
 
     @include tablet {
         width: 2.5rem;
         height: 2.5rem;
     } 
+
 }
