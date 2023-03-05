@@ -5,7 +5,7 @@ import './CommentSection.scss'
 function CommentSection (props) {
 
     return (
-        <div className='Comment'>
+        <div className='comment'>
             <CommentForm />
             <CommentList 
                 Videos={props.Videos}

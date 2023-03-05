@@ -1,14 +1,10 @@
 import "./CommentList.scss";
-// import VideoData from "../../assets/Data/video-details.json";
-// import { useState } from "react";
 import CommentListData from "../CommentListData/CommentListData";
 
 function CommentList(props) {
-  // const [Videos] = useState(VideoData);
-  // const [selectedVideo, setSelectedVideo] = useState(Videos[0]);
 
   return (
-    <ul id="Comment__Section" className="Comment__Section">
+    <ul id="comment__section" className="comment__section">
       {props.selectedVideo.comments.map((comment) => {
         {/* console.log('comments:', comment); */}
 

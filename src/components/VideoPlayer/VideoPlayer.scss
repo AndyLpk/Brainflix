@@ -4,12 +4,13 @@
 
 
 
-.video{
+.player{
+
+    padding-bottom: 1rem;
 
 
-    &__player {
+    &__video {
         width: 100%;
-        padding-bottom: 1rem;
         
 
         @include tablet {
@@ -17,8 +18,6 @@
             background-color: black;
             aspect-ratio: 16 / 9 ;
             max-height: 48vh;
-            margin-bottom: 1rem; 
-            padding-bottom: 0;
         }
 
         @include desktop {

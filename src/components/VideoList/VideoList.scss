@@ -4,58 +4,75 @@
 
 
 
-.Video {
+.video {
 
     @include padding (0,1,0,1);
+
+    @include tablet {
+        @include padding (0,2,0,2);
+        width: 50%
+    }
     
 
-    &__Header {
+    &__header {
         @include mobile-sectionheader;
         color: silver;
         text-transform: uppercase;
+
+        @include tablet {
+            @include sectionheader;
+        }
     }
 
-    &__List {
+    &__list {
         list-style: none;
         padding: 0;
     }
 
-    &__Images {
+    &__img {
         aspect-ratio: 16 / 9;
         max-width: 100%;
         width: 35%;
         
     }
 
-    &__Img {
+    &__images {
         border-radius: 4px;
         aspect-ratio: 16 / 9;
         object-fit: cover;
         
     }
 
-    &__Wrapper {
+    &__wrapper {
         display: flex;
         justify-content: space-between;
 
-
     }
 
-    &__Right {
+    &__right {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 60%;
     }
 
-    &__Title {
+    &__title {
         margin: 0;
         @include mobile-sectionheader;
+
+        @include tablet {
+            @include subheader;
+            width: 90%;
+        }
     }
 
-    &__Channel {
+    &__channel {
         margin: 0;
         @include mobile-bodyfont;
+
+        @include tablet {
+            @include bodyfont;
+        }
     }
 
 }

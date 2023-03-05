@@ -19,7 +19,6 @@ function App() {
     const filteredVideos = Videos.filter(video => video.id === id);
     console.log(filteredVideos);
     setSelectedVideo(filteredVideos[0]); 
-    // try looking into a .find method for arrays 💡
   };
 
   return (

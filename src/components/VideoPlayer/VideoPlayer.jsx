@@ -4,8 +4,8 @@ function VideoPlayer (props) {
 
 
     return (
-        <section className='video'>
-            <video className='video__player' controls poster={props.selectedVideo.image} src={props.selectedVideo.video}></video>
+        <section className='player'>
+            <video className='player__video' controls poster={props.selectedVideo.image} src={props.selectedVideo.video}></video>
         </section>
     )
 }
