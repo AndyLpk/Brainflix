@@ -1,4 +1,5 @@
 import "./CommentList.scss";
+
 import CommentListData from "../CommentListData/CommentListData";
 
 function CommentList(props) {

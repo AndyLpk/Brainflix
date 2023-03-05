@@ -1,6 +1,7 @@
+import "./CommentForm.scss";
+
 import Avatar from "../AvatarImage/AvatarImage";
 import CommentButton from "../CommentButton/CommentButton";
-import "./CommentForm.scss";
 
 function CommentForm() {
   return (

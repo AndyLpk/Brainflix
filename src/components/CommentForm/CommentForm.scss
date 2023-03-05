@@ -16,6 +16,11 @@
         @include tablet {
             gap: 1.25rem;
         }
+
+        @include desktop {
+            @include padding (1,1.75,1,1);
+            gap: 2rem;
+        }
     }
 
     &__header {
@@ -23,7 +28,7 @@
         flex-direction: row;
         align-items: flex-start;
         padding-top: 1.25rem;
-        width: 2.75rem;        
+        width: 2.75rem;  
     }
 
     &__avatar {
@@ -62,7 +67,6 @@
         @include mobile-subheader;
         font-family: AvenirNext LT Pro;
         font-weight: 400;
-        background-color: #fafafa;
         margin-bottom: 1rem;
         width: 100%;
             
@@ -72,8 +76,8 @@
             text-indent: 1rem;
             width: 71.25%;
             margin: 0;
-
         }
+
         
     }    
 
@@ -82,6 +86,19 @@
         width: 100%;
         height: auto;
         font-family: AvenirNext LT Pro;
+        @include mobile-subheader;
+
+        @include tablet {
+            @include bodyfont;
+        }
         
     }
+
+    &__input::active {
+        border: 2px solid $secondary-color;
+    }
+
+    
 }
+
+

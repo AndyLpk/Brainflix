@@ -10,5 +10,8 @@
         @include padding (0,2,0,2);
     }
 
+    @include desktop {
+        padding: 0;
+    }
     
 }

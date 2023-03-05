@@ -19,3 +19,22 @@ img {
   max-width: 100%;
   
 }
+
+.app {
+
+  &__wrapper {
+
+    @include desktop {
+      @include padding (0,8,0,8);
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+
+    @include desktop {
+      width: 68%;
+    }
+  }
+}

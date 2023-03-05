@@ -1,8 +1,9 @@
-import Avatar from '../AvatarImage/AvatarImage';
+import './Header.scss'
+
 import Logo from '../Logo/Logo';
 import SearchBox from '../SearchBox/SearchBox';
+import Avatar from '../AvatarImage/AvatarImage';
 import UploadButton from '../UploadButton/UploadButton';
-import './Header.scss'
 
 
 function Header () {

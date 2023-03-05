@@ -12,6 +12,12 @@
         @include padding (0,2,0,2);
         width: 50%
     }
+
+    @include desktop {
+        width: 32%;
+        @include padding (0,0,0,1.5);
+        border-left: 1px solid silver;
+    }
     
 
     &__header {

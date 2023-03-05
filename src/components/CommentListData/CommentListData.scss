@@ -16,6 +16,12 @@
         @include tablet {
             @include bodyfont;
         }
+
+        @include desktop {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            gap: 1.5rem;
+        }
         
     } 
 

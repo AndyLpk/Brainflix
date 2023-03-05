@@ -1,4 +1,5 @@
 import './Logo.scss';
+
 import logo from "../../assets/Logo/BrainFlix-logo.svg"
 
 function Logo() {

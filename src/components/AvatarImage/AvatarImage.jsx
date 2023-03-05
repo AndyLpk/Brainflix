@@ -1,4 +1,5 @@
 import avatar from '../../assets/Images/Mohan-muruge.jpg';
+
 import './AvatarImage.scss'
 
 
