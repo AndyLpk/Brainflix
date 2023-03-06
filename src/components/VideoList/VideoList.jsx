@@ -12,7 +12,8 @@ function VideoList(props) {
             <li className="video__items">
               <div className="video__wrapper">
                 <div className="video__img">
-                  <img className="video__images" src={video.image} />
+                  {/* <img className="video__images" src={video.image} /> */}
+                  <video className="video__images" poster={video.image} src={video.video}></video>
                 </div>
                 
 

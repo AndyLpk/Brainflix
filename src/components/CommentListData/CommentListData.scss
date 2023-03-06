@@ -25,6 +25,12 @@
         
     } 
 
+    &__item:last-child {
+        @include desktop {
+            border-bottom: none;
+        }
+    }
+
     &__header {
 
         &--list {
