@@ -23,13 +23,13 @@ function HomePage() {
     };
 
     return (
-      <div className="homepage">
+      <div className="homePage">
         <Header />
 
         <VideoPlayer Videos={Videos} selectedVideo={selectedVideo} />
 
-        <div className="homepage__wrapper">
-          <div className="homepage__content">
+        <div className="homePage__wrapper">
+          <div className="homePage__content">
             <VideoDescription Videos={Videos} selectedVideo={selectedVideo} />
 
             <CommentSection Videos={Videos} selectedVideo={selectedVideo} />

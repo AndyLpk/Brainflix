@@ -87,6 +87,7 @@
         height: auto;
         font-family: AvenirNext LT Pro;
         @include mobile-subheader;
+        font-weight: 400;
 
         @include tablet {
             @include bodyfont;
