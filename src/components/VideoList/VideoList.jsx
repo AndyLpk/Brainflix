@@ -5,15 +5,14 @@ function VideoList(props) {
     <section className="video">
       <h3 className="video__header">next videos</h3>
 
-      {props.videos
+      {props.Videos
         .filter((video) => video.id !== props.selectedVideo.id)
         .map((video) => (
           <ul className="video__list" key={video.id} onClick={() => props.handleVideoClick(video.id)}>
             <li className="video__items">
               <div className="video__wrapper">
                 <div className="video__img">
-                  {/* <img className="video__images" src={video.image} /> */}
-                  <video className="video__images" poster={video.image} src={video.video}></video>
+                  <img className="video__images" src={video.image} />
                 </div>
                 
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './UploadButton.scss'
 
 function UploadButton () {
@@ -6,7 +7,7 @@ function UploadButton () {
 
         <div className='header__upload'>
 
-            <button className="header__button">upload</button>
+            <Link to="/upload" className="header__button">upload</Link>
             
         </div>
     )

@@ -1,58 +1,21 @@
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage"
 import './App.scss';
 
-import VideoData from './assets/Data/video-details.json'
-import { useState } from 'react';
 
-import Header from './components/Header/Header';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import VideoDescription from './components/VideoDescription/VideoDescription'
-import CommentSection from './components/CommentSection/CommentSection';
-import VideoList from './components/VideoList/VideoList';
 
 function App() {
 
-  const [Videos] = useState(VideoData);
-  const [selectedVideo, setSelectedVideo] = useState(Videos[0]);
-
-  const handleVideoClick = (id) => {
-    // console.log("click", id);
-    const filteredVideos = Videos.filter(video => video.id === id);
-    console.log(filteredVideos);
-    setSelectedVideo(filteredVideos[0]); 
-  };
-
   return (
-    <div className="app">
-      <Header />
-      
-      <VideoPlayer 
-        Videos={Videos}
-        selectedVideo={selectedVideo}
-      />
-
-      <div className='app__wrapper'>
-
-        <div className='app__content'>
-
-          <VideoDescription 
-            Videos={Videos}
-            selectedVideo={selectedVideo}
-          />
-                  
-          <CommentSection 
-            Videos={Videos}
-            selectedVideo={selectedVideo}
-          />
-
-        </div>
-        <VideoList 
-          videos={Videos} 
-          selectedVideo={selectedVideo} 
-          handleVideoClick={handleVideoClick}
-        />
-      </div>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />}/>
+        <Route path='/upload' element={<UploadPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

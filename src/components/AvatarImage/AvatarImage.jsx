@@ -7,7 +7,7 @@ function Avatar() {
 
     return(
         <div className='header__avatar  comment__avatar'>
-            <img className='avatar' src={avatar}/>
+            <img className='avatar' src={avatar} alt="avatar img"/>
         </div>
     )
 }

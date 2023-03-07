@@ -6,10 +6,12 @@
 
     &__avatar {
         order: 1;
+        height: 2.25rem;
 
         @include tablet {
             order: 2;
             padding-left: 0.75rem;
+            height: 2.5rem;
         }
     }
 }
