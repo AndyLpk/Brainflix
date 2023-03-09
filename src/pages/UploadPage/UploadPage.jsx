@@ -7,7 +7,7 @@ function UploadPage() {
     <div className="uploadPage">
       <Header className="uploadPage__header" />
 
-        <div className="uploadPage__hero">
+        <form className="uploadPage__hero">
             <h1 className="uploadPage__title">Upload Video</h1>
 
             <div className="uploadPage__content">
@@ -16,7 +16,7 @@ function UploadPage() {
                     <img className="uploadPage__img" src={VideoPreview} alt="video preview img" />
                 </div>
 
-                <form className="uploadPage__form">
+                <div className="uploadPage__form">
                     <div className="uploadPage__top">
                     <label htmlFor="uploadForm" className="uploadPage__label">
                         title your video
@@ -40,7 +40,7 @@ function UploadPage() {
                         className="uploadPage__input uploadPage__input--description"
                     ></textarea>
                     </div>
-                </form>
+                </div>
             </div>
 
             <div className="uploadPage__wrapper2">
@@ -48,7 +48,7 @@ function UploadPage() {
                 <button className="uploadPage__button uploadPage__button--cancel">cancel</button>
             </div>
 
-        </div>
+        </form>
     </div>
   );
 }

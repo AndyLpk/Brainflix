@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
 function VideoList(props) {
@@ -5,26 +6,26 @@ function VideoList(props) {
     <section className="video">
       <h3 className="video__header">next videos</h3>
 
-      {props.Videos
-        .filter((video) => video.id !== props.selectedVideo.id)
-        .map((video) => (
-          <ul className="video__list" key={video.id} onClick={() => props.handleVideoClick(video.id)}>
-            <li className="video__items">
-              <div className="video__wrapper">
-                <div className="video__img">
-                  <img className="video__images" src={video.image} />
-                </div>
-                
+      {props.Videos.filter((video) => video.id !== props.selectedVideo.id).map(
+        (video) => (
+          <ul className="video__list" key={video.id}>
+            <Link to={`/videos/${video.id}`} className="video__link">
+              <li className="video__items">
+                <div className="video__wrapper">
+                  <div className="video__img">
+                    <img className="video__images" src={video.image} />
+                  </div>
 
-                <div className="video__right">
-                  <p className="video__title">{video.title}</p>
-                  <p className="video__channel">{video.channel}</p>
+                  <div className="video__right">
+                    <p className="video__title">{video.title}</p>
+                    <p className="video__channel">{video.channel}</p>
+                  </div>
                 </div>
-
-              </div>
-            </li>
+              </li>
+            </Link>
           </ul>
-        ))}
+        )
+      )}
     </section>
   );
 }

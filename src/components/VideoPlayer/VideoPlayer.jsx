@@ -1,11 +1,11 @@
 import './VideoPlayer.scss'
 
-function VideoPlayer (props) {
+function VideoPlayer ({selectedVideo}) {
 
 
     return (
         <section className='player'>
-            <video className='player__video' controls poster={props.selectedVideo.image} src={props.selectedVideo.video}></video>
+            <video  className='player__video' controls poster={selectedVideo.image} src={selectedVideo.video}></video>
         </section>
     )
 }
