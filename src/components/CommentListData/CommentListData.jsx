@@ -1,6 +1,6 @@
 import './CommentListData.scss'
 
-function CommentListData(props) {
+function CommentListData(selectedVideoComments) {
 
 
     return (
@@ -10,11 +10,11 @@ function CommentListData(props) {
             </div>
             <div className='comment__wrapper comment__wrapper--list'>
                 <div className='comment__top'>
-                    <p className='comment__name'>{props.comment.name}</p>
-                    <p className='comment__date'>{new Date(props.comment.timestamp).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
+                    <p className='comment__name'>{selectedVideoComments.comment.name}</p>
+                    <p className='comment__date'>{new Date(selectedVideoComments.comment.timestamp).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                 </div>
                 <div className='comment__filler'>
-                    <p className='comment__content'>{props.comment.comment}</p>
+                    <p className='comment__content'>{selectedVideoComments.comment.comment}</p>
                 </div>
             </div>
 

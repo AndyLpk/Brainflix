@@ -6,10 +6,10 @@ import Avatar from '../AvatarImage/AvatarImage';
 import UploadButton from '../UploadButton/UploadButton';
 
 
-function Header (props) {
+function Header ({className}) {
 
     return(
-        <section className={`header ${props.className}`}>
+        <section className={`header ${className}`}>
             <Logo />
 
             <div className='header__nav'>

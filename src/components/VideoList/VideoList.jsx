@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
-function VideoList(props) {
+function VideoList(VideosItem) {
   return (
     <section className="video">
       <h3 className="video__header">next videos</h3>
 
-      {props.Videos.filter((video) => video.id !== props.selectedVideo.id).map(
+      {VideosItem.Videos.filter((video) => video.id !== VideosItem.selectedVideo.id).map(
         (video) => (
           <ul className="video__list" key={video.id}>
             <Link to={`/videos/${video.id}`} className="video__link">
               <li className="video__items">
                 <div className="video__wrapper">
                   <div className="video__img">
-                    <img className="video__images" src={video.image} />
+                    <img className="video__images" src={video.image} alt="video img" />
                   </div>
 
                   <div className="video__right">
