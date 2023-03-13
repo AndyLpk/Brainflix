@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
 function VideoList(VideosItem) {
+
+  function scrollToTop() {
+    window.scrollTo({top: 0,behavior: "smooth"})
+  }
+
   return (
     <section className="video">
       <h3 className="video__header">next videos</h3>
@@ -9,7 +14,7 @@ function VideoList(VideosItem) {
       {VideosItem.Videos.filter((video) => video.id !== VideosItem.selectedVideo.id).map(
         (video) => (
           <ul className="video__list" key={video.id}>
-            <Link to={`/videos/${video.id}`} className="video__link">
+            <Link to={`/videos/${video.id}`} onClick={scrollToTop} className="video__link">
               <li className="video__items">
                 <div className="video__wrapper">
                   <div className="video__img">
