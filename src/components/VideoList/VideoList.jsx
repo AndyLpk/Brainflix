@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./VideoList.scss";
+import { api } from "../../pages/HomePage/HomePage";
 
 function VideoList(VideosItem) {
 
@@ -18,7 +19,7 @@ function VideoList(VideosItem) {
               <li className="video__items">
                 <div className="video__wrapper">
                   <div className="video__img">
-                    <img className="video__images" src={video.image} alt="video img" />
+                    <img className="video__images" src={`${api}${video.image}`} alt="video img" />
                   </div>
 
                   <div className="video__right">

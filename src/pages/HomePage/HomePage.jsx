@@ -10,11 +10,9 @@ import CommentSection from '../../components/CommentSection/CommentSection';
 import VideoList from '../../components/VideoList/VideoList';
 import { useParams } from 'react-router-dom';
 
-export const api = "https://project-2-api.herokuapp.com";
-export const apiKey = "b3d2fb56-2d62-4a7a-ae24-56521d130a9a";
+export const api = process.env.REACT_APP_API_URL;
 
 function HomePage() {
-
     const [Videos, setVideos] = useState([]);
     const [selectedVideo, setSelectedVideo] = useState({});
     const {videoId} = useParams();
@@ -33,7 +31,7 @@ function HomePage() {
     }, [videoId, Videos]);
 
     function getVideo(videoId) {
-      axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+      axios.get(`${api}/videos/${videoId}`)
       .then((response) => {
         // console.log("res: ", response);
         setSelectedVideo(response.data);
@@ -45,7 +43,7 @@ function HomePage() {
 
     function getVideos() {
       axios
-        .get(`${api}/videos?api_key=${apiKey}`)
+        .get(`${api}/videos`)
         .then((response) => {
           // console.log("response from getVideos:", response.data);
           setVideos(response.data);
