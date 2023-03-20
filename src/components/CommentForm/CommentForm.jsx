@@ -4,8 +4,11 @@ import Avatar from "../AvatarImage/AvatarImage";
 import CommentButton from "../CommentButton/CommentButton";
 
 function CommentForm() {
+
+  
+   
   return (
-    <form className="comment__form">
+    <form  className="comment__form">
       <div className="comment__header">
         <Avatar />
       </div>
@@ -16,8 +19,8 @@ function CommentForm() {
 
         <div className="comment__wrapper-2">
           <textarea
-            id="commentBox"
-            name="commentBox"
+            id="comment"
+            name="comment"
             placeholder="Add a new comment"
             className="comment__input"
           ></textarea>

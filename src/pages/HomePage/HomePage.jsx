@@ -54,16 +54,16 @@ function HomePage() {
     }
 
     return (
-      <div className="homePage">
+      <div className="homepage">
         <Header />
 
         <VideoPlayer selectedVideo={selectedVideo} />
 
-        <div className="homePage__wrapper">
-          <div className="homePage__content">
+        <div className="homepage__wrapper">
+          <div className="homepage__content">
             <VideoDescription  selectedVideo={selectedVideo} />
 
-            <CommentSection  selectedVideoComments={selectedVideo.comments} /> 
+            <CommentSection Videos={Videos} selectedVideoComments={selectedVideo.comments} /> 
           </div>
 
           <VideoList

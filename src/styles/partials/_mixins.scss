@@ -83,3 +83,7 @@
     max-width: 7.5rem;
     max-height: 1.5625rem;
   }
+
+  @mixin refection {
+    -webkit-box-reflect:below, 5px, linear-gradient(to top, transparent, transparent 50%, white)
+  }

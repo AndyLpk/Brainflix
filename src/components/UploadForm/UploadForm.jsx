@@ -2,6 +2,8 @@ import "./UploadForm.scss";
 
 import { useState } from "react";
 import VideoPreview from "../../assets/Images/Upload-video-preview.jpg";
+import { api } from "../../pages/HomePage/HomePage";
+import  axios  from "axios";
 
 function UploadForm() {
 
@@ -9,7 +11,7 @@ function UploadForm() {
     const [description, setDescription] = useState("");
 
     const handleChangeTitle = (event) => {
-        setTitle(event.target.vlaue);
+        setTitle(event.target.value);
     };
 
     const handleChangeDescription = (event) => {
@@ -17,7 +19,7 @@ function UploadForm() {
     };
 
     const isFormValid = () => {
-        if (title === "" || description === "") {
+        if (title.trim() === "" || description.trim() === "") {
             return false;
         }
         return true;
@@ -27,30 +29,43 @@ function UploadForm() {
         event.preventDefault();
 
         if (isFormValid()) {
-            alert("Upload successful!!");
-            window.location.href = '/'
-        }else {
+          axios
+            .post(`${api}/videos`, {
+              title: title,
+              description: description,
+            })
+            .then(() => {
+              alert("Upload successful!!");
+              window.location.href = "/";
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+
+            event.target.reset();
+            
+        }else {    
             alert("Upload unsuccessful!!  Make sure everything is FILL UP!!!");
         }
     };
 
   return (
-    <form onSubmit={handleSubmit} className="uploadPage__hero">
-      <h1 className="uploadPage__title">Upload Video</h1>
+    <form onSubmit={handleSubmit} className="uploadpage__hero">
+      <h1 className="uploadpage__title">Upload Video</h1>
 
-      <div className="uploadPage__content">
-        <div className="uploadPage__wrapper">
-          <h3 className="uploadPage__subtitle">video thumbnail</h3>
+      <div className="uploadpage__content">
+        <div className="uploadpage__wrapper">
+          <h3 className="uploadpage__subtitle">video thumbnail</h3>
           <img
-            className="uploadPage__img"
+            className="uploadpage__img"
             src={VideoPreview}
             alt="video preview img"
           />
         </div>
 
-        <div className="uploadPage__form">
-          <div className="uploadPage__top">
-            <label htmlFor="uploadForm" className="uploadPage__label">
+        <div className="uploadpage__form">
+          <div className="uploadpage__top">
+            <label htmlFor="uploadForm" className="uploadpage__label">
               title your video
             </label>
             <input
@@ -58,12 +73,12 @@ function UploadForm() {
               name="title"
               onChange={handleChangeTitle}
               placeholder="Add a title to your video"
-              className="uploadPage__input"
+              className="uploadpage__input"
             ></input>
           </div>
 
-          <div className="uploadPage__bottom">
-            <label htmlFor="uploadForm" className="uploadPage__label">
+          <div className="uploadpage__bottom">
+            <label htmlFor="uploadForm" className="uploadpage__label">
               add a video description
             </label>
             <textarea
@@ -71,21 +86,21 @@ function UploadForm() {
               name="description"
               onChange={handleChangeDescription}
               placeholder="Add a description to your video"
-              className="uploadPage__input uploadPage__input--description"
+              className="uploadpage__input uploadpage__input--description"
             ></textarea>
           </div>
         </div>
       </div>
 
-      <div className="uploadPage__wrapper2">
+      <div className="uploadpage__wrapper2">
         <button
           type="submit"
-          className="uploadPage__button uploadPage__button--publish"
+          className="uploadpage__button uploadpage__button--publish"
         >
           publish
         </button>
         <button
-          className="uploadPage__button uploadPage__button--cancel"
+          className="uploadpage__button uploadpage__button--cancel"
         >
           cancel
         </button>

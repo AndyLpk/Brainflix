@@ -1,0 +1,33 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.found {
+    background-color: #323232;
+}
+.notfound {
+  font-size: 4em;
+  color: rgb(23, 202, 242);
+  text-align: center;
+  margin: 10rem;
+  display: block;
+  position: relative;
+  top: 20rem;
+  width:80%;
+  zoom:0.9;
+  margin:10rem auto;
+  text-shadow: 0 0 35px rgb(16, 200, 237);
+  animation: spin-360 20s infinite;
+
+  @include refection;
+  
+  @keyframes spin-360 { 
+    from {
+      transform: rotate(0deg);
+}
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
